@@ -1,0 +1,100 @@
+footer {
+    position: relative;
+    background-color: #2A2A2A;
+    padding: 40px 0 0;
+    color: #ffffff;
+    & > .container {
+        position: relative;
+        padding-bottom: 52px;
+        & > img {
+            position: absolute;
+            top: -16px;
+            left: -60px;
+        }
+    }
+}
+.footer-bottom {
+    padding: 11px 0 12px;
+    background-color: #1F1F1F;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #797979;
+        font-size: 14px;
+        a {
+            transition: .2s;
+            &:hover {
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+    }
+}
+.footer-subtitle {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #919191;
+    margin-bottom: 16px;
+}
+.footer-list {
+    li {
+        line-height: 22px;
+        a {
+            display: inline-block;
+            position: relative;
+            opacity: .8;
+            transition: opacity ease 0.3s;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 1px;
+                width: 100%;
+                background-color: #fff;
+                opacity: 0;
+                transition: opacity ease 0.3s;
+            }
+            &:hover {
+                opacity: 1;
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+        & + li {
+            margin-top: 12px;
+        }
+    }
+}
+.footer-list-acc {
+    display: flex;
+    align-items: center;
+    li {
+        img {
+            width: 24px;
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(88%) sepia(24%) saturate(5222%) hue-rotate(351deg) brightness(93%) contrast(93%);
+            }
+        }
+        & + li {
+            margin-left: 24px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    footer {
+        padding-top: 10px;
+        & > .container > img {
+            top: 10px;
+            left: 15px;
+        }
+    }
+    .footer-subtitle {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .footer-list-acc {
+        margin-top: 14px;
+    }
+}
