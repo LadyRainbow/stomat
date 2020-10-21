@@ -242,8 +242,16 @@
             line-height: 22px;
         }
         img {
+            position: relative;
+            left: 0;
             transform: rotate(180deg);
             margin-left: 19px;
+            transition: .2s;
+        }
+        &:hover {
+            img {
+                left: 5px;
+            }
         }
     }
 }

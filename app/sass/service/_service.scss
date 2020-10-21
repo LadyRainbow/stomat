@@ -22,13 +22,21 @@
     display: flex;
     align-items: center;
     img {
+        position: relative;
         width: 17px;
         margin-right: 19px;
+        transition: .2s;
+        right: 0;
     }
     span {
         letter-spacing: 0.05em;
         text-transform: uppercase;
         color: #E6B012;
+    }
+    &:hover {
+        img {
+            right: 4px;
+        }
     }
 }
 // 2 block
@@ -71,13 +79,31 @@
 }
 article {
     width: 100%;
-    h1, h2, h3, h4, h5, h6 {
+    a {
+        color: #E6B012;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+            color: #E6B012;
+        }
+    }
+    h2 {
         font-family: 'Inter', sans-serif;
         font-style: normal;
-        font-weight: 200;
+        font-weight: 300;
         font-size: 48px;
         line-height: 1.1;
         letter-spacing: -0.03em;
+        color: #2A2A2A;
+    }
+    h3, h4, h5, h6 {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        color: #2A2A2A;
     }
     img {
         filter: grayscale(1);
@@ -187,8 +213,11 @@ article {
         }
     }
     article {
-        h1, h2, h3, h4, h5, h6 {
+        h2 {
             font-size: 36px;
+        }
+        h3, h4, h5, h6 {
+            font-size: 24px;
         }
         img.alignright {
             max-width: 100%;

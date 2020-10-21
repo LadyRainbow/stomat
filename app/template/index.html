@@ -42,7 +42,23 @@
     <script src="../../build/js/pagination.js"></script>
     <script src="../../build/js/jquery.maskedinput.min.js"></script>
     <script src="../../build/js/main.js"></script>
-    <!-- <script src="../../build/js/map.js"></script> -->
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4R9PQyMDROizmuglGKqxCnsFl62st7pM"></script>
+    <script>
+        // Initialize Google map page Contact
+        function initMap() {
+            var map;
+            var mapConteiner = $('#contact-map')[0];
+
+            var mapCenter = { lat: 50.448820, lng: 30.513599, };
+
+            map = new google.maps.Map(mapConteiner, {
+                center: mapCenter,
+                zoom: 14,
+            });
+        };
+        initMap();
+    </script>
     <script type="text/javascript">
         function validation (a) {
             var form = $(a);

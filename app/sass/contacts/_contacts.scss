@@ -1,0 +1,122 @@
+.contacts-page {
+    overflow: hidden;
+}
+.contacts-first {
+    position: relative;
+    padding-top: 149px;
+    padding-bottom: 137px;
+    .container {
+        position: relative;
+    }
+}
+.cont-letter {
+    position: absolute;
+    top: 136px;
+    left: -50px;
+    font-weight: 300;
+    font-size: 250px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #F7F7F7;
+    font-family: 'Raleway', sans-serif;
+}
+// 2 block
+.contacts-plashka {
+    position: relative;
+    z-index: 2;
+    height: 500px;
+    .container {
+        position: relative;
+    }
+}
+.cont-pop {
+    position: relative;
+    top: -69px;
+    width: 100%;
+    padding: 30px 32px 49px;
+    background-color: #fff;
+    border: 1px solid #EBEFF8;
+    & > img {
+        width: 48px;
+        margin-bottom: 55px;
+    }
+}
+.cont-pop2 {
+    position: relative;
+    top: 391px;
+    width: 100%;
+    padding: 30px 32px 49px;
+    background-color: #fff;
+    border: 1px solid #EBEFF8;
+    .footer-subtitle {
+        & + p {
+            color: #2A2A2A;
+        }
+    }
+}
+.section-map {
+    padding: 164px 0;
+    h2 {
+        color: #2A2A2A;
+        margin-bottom: 40px;
+    }
+}
+#contact-map {
+    min-height: 360px;
+    height: 100%;
+}
+.vert-inp {
+    .input-style {
+        & + .input-style {
+            margin-top: 24px;
+        }
+    }
+    .warning {
+        margin-top: 24px;
+        margin-bottom: 48px;
+        text-align: left;
+    }
+    .form-btn {
+        margin: 0;
+    }
+}
+.input-form.black {
+    color: #2A2A2A;
+}
+.comment-textarea {
+    height: 104px;
+}
+@media (max-width: 991px) {
+    .cont-pop2 {
+        top: 100px;
+    }
+}
+@media (max-width: 767px) {
+    .contacts-first {
+        padding-top: 69px;
+        padding-bottom: 107px;
+    }
+    .cont-letter {
+        top: 156px;
+        left: -20px;
+        font-size: 100px;
+    }
+    .cont-pop > img {
+        margin-bottom: 20px;
+    }
+    .contacts-plashka {
+        height: 670px;
+        .head-info .footer-subtitle {
+            margin-top: 0;
+        }
+    }
+    .cont-pop2 {
+        top: 0;
+    }
+    .section-map {
+        padding: 158px 0 170px;
+    }
+    #contact-map {
+        margin-top: 70px;
+    }
+}

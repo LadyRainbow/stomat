@@ -32,6 +32,10 @@ $(document).ready(function () {
         $(window).scroll(function() {
             headerChange();
         });
+        $('.spectrum-name + p').each(function (index, value){
+            var heightText = $(this).height();
+            $(this).closest('.spectrum-block-content').css('transform', 'translateY(' + heightText + 'px)');
+        });
     };
 
     // soft scroll
@@ -65,10 +69,7 @@ $(document).ready(function () {
         nextArrow: $('.next-main-arrow'),
         dots: false
     });
-    $('.spectrum-name + p').each(function (index, value){
-        var heightText = $(this).height();
-        $(this).closest('.spectrum-block-content').css('transform', 'translateY(' + heightText + 'px)')
-    });
+
     $('.main-rev-slider').slick({
         // autoplay: true,
         infinite: true,
@@ -148,12 +149,12 @@ $(document).ready(function () {
         });
     };
 
+
+
+    // open/close tel
     $('.header-tel-img').click(function () {
         $('.header-tel').toggleClass('active');
     });
-
-    // open/close search
-
     $(document).mouseup(function (e){ // событие клика по веб-документу
 		var div = $('.header-tel'); // тут указываем ID элемента
         if (!div.is(e.target) && div.has(e.target).length === 0) {
@@ -161,41 +162,12 @@ $(document).ready(function () {
 		}
 	});
 
-   // review page
-    if($('.review-block').length > 4) {
-       $('.show-rev-btn').addClass('active');
-    };
-    $('.show-rev-btn').click(function () {
-        $('.review-block').addClass('active');
-        $(this).fadeOut();
-    });
 
-   // partners page
-    if($('.partners-page-content .col-12').length > 9) {
-       $('.show-partn-btn').addClass('active');
-    };
-    $('.show-partn-btn').click(function () {
-        $('.partners-page-content .col-12').addClass('active');
-        $(this).fadeOut();
-    });
     // go back
     $('.back-arrow').click(function(){
         window.history.back();
     });
 
-
-
-    // tabs
-    // tabs change link color
-    $('.tab-list li').click(function () {
-        $(this).closest('.tab-list').find('li').removeClass('active');
-        $(this).addClass('active');
-    });
-    $('.redact-address-btn').click(function () {
-        var idBlockContent = $(this).attr('data-tab');
-        $('.lk-address-body').removeClass('active');
-        $('#' + idBlockContent + '').addClass('active');
-    });
 
     // menu
     $('.burger').click(function () {
